@@ -659,4 +659,19 @@ class IWD_OnepageCheckout_IndexController extends Mage_Checkout_Controller_Actio
         		return false;
         }
     }
+    
+    
+    /**
+     * Register selected vitual ship rates;
+     *
+     * @return void
+     */
+    public function registerStoreMethodAction(){
+    	 
+    	if ($this->getRequest()->isAjax()) {
+    		$selected = (is_array(Mage::getModel('core/session')->getSelectedVirtualRates())) ? Mage::getModel('core/session')->getSelectedVirtualRates() : array();
+    		$selected[$this->getRequest()->getPost('method')] = $this->getRequest()->getPost('value');
+    		Mage::getModel('core/session')->setSelectedVirtualRates($selected);
+    	}
+    }
 }
