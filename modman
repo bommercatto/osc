@@ -1,0 +1,13 @@
+# IWD OnepageCheckout
+
+code                   				app/code/local/IWD/OnepageCheckout/
+IWD_OnepageCheckout.xml         	app/etc/modules/IWD_OnepageCheckout.xml
+skin/frontend						skin/frontend/default/default/
+
+frontend/layout/*      				app/design/frontend/default/default/layout/
+frontend/template/*      			app/design/frontend/default/default/template/
+lib									lib
+
+locale								app/locale
+
+skin/frontend						skin/frontend/default/default/
